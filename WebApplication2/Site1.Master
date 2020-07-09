@@ -5,6 +5,8 @@
 <html>
 <head runat="server">
     <title></title>
+      <script type="text/javascript" src="javascript/script.js">
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <meta charset="utf-8">
@@ -84,10 +86,11 @@ footer {
 <section style="height: 592px; width: 1315px">
   <nav>
     <ul>
-        <li><asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/WebForm3.aspx">Welcome</asp:LinkButton></li>
-        <li><asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/WebForm2.aspx">My Profile</asp:LinkButton></li>
-       <li><asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/WebForm1.aspx">Users</asp:LinkButton></li>
-       <li> <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/WebForm4.aspx">Access Requests</asp:LinkButton></li>
+        <li><asp:LinkButton ID ="LinkButton5" runat="server" PostBackUrl="~/WelForAdmin.aspx">Welcome</asp:LinkButton></li>
+        <li><asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/editUser.aspx">My Profile</asp:LinkButton></li>
+        <li><asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Users.aspx">Users</asp:LinkButton></li>
+       <li><asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ReqForAdmin.aspx">Access Requests</asp:LinkButton></li>
+       <li> <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/Login.aspx">Logout</asp:LinkButton></li>
      
     </ul>
   </nav>
@@ -95,7 +98,8 @@ footer {
   <asp:ContentPlaceHolder ID="ContentPlaceHolderTop" runat="server"></asp:ContentPlaceHolder>
             <asp:ContentPlaceHolder ID="ContentPlaceHolderTest" runat="server"></asp:ContentPlaceHolder>
            
-            <asp:ContentPlaceHolder ID="ContentPlaceHolderBottom" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderBottom" runat="server">
+            </asp:ContentPlaceHolder>
   </article>
  
 </section>
