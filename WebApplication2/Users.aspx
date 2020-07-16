@@ -2,9 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderTop" runat="server">
-    <asp:Button ID="Button1" runat="server" Text="Create" OnClick="Button1_Click" /><asp:Button ID="Button2" runat="server" Text="View" /><asp:Button ID="Button3" runat="server" Text="Edit" OnClick="Button3_Click" />
-    <br /><br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="UserId" DataSourceID="SqlDataSource2" ForeColor="Black" Width="16px" style="margin-right: 0px; margin-left: 5px;" Height="317px">
+    <asp:Button ID="Button1" runat="server" Text="Create" OnClick="Button1_Click" /><asp:Button ID="Button2" runat="server" Text="View" OnClick="Button2_Click" /><asp:Button ID="Button3" runat="server" Text="Edit" OnClick="Button3_Click" />
+    <br /><br /><div>
+           <asp:TextBox runat="server" ID="txtSearch" />
+           <asp:Button runat="server" ID="btnSearchBar" Style="background-color: #c9302c;" CssClass="btn btn-danger" Text="Search" OnClientClick="javascipt: return confirm('are you sure want to search ?');" OnClick="btnSearchBar_Click" />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+       </div>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="UserId"  ForeColor="Black" Width="16px" style="margin-right: 0px; margin-left: 5px;" Height="317px">
     <Columns>
         <asp:BoundField DataField="UserId" HeaderText="UserId" ReadOnly="True" SortExpression="UserId" />
         <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />

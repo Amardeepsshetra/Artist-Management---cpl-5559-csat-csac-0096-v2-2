@@ -81,6 +81,7 @@
     <Content Include="Web.config" />
     <Content Include="Users.aspx" />
     <Content Include="EditUserForReg.aspx" />
+    <Content Include="View.aspx" />
     <Content Include="WelForAdmin.aspx" />
     <Content Include="Adduser.aspx" />
     <Content Include="ReqForAdmin.aspx" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="EditUserForReg.aspx.designer.cs">
       <DependentUpon>EditUserForReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
     </Compile>
     <Compile Include="WelForAdmin.aspx.cs">
       <DependentUpon>WelForAdmin.aspx</DependentUpon>
