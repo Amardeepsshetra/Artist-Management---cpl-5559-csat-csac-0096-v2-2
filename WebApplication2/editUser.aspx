@@ -14,6 +14,7 @@
          <asp:ListItem>Pianist</asp:ListItem>
          <asp:ListItem>Violinist</asp:ListItem>
          <asp:ListItem>Playback Singer</asp:ListItem>
+         <asp:ListItem>Playback Singer</asp:ListItem>
      </asp:DropDownList>
      <br />
     <asp:Label ID="Label6" runat="server" Text="Email"></asp:Label> <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox><br />
