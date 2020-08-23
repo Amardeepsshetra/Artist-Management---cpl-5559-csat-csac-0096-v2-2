@@ -47,8 +47,8 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
      <asp:TextBox ID="TextBox4" runat="server" ReadOnly="True" AutoCompleteType="Disabled">Filled By Admin</asp:TextBox><br />
      <br />
     <asp:Label ID="Label6" runat="server" Text="Email"></asp:Label> <asp:TextBox ID="TextBox5" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
-    <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label> <asp:TextBox ID="TextBox6" runat="server" AutoCompleteType="Disabled" TextMode="Password"></asp:TextBox><br />
-    <asp:Label ID="Label8" runat="server" Text="Confirm Password"></asp:Label> <asp:TextBox ID="TextBox7" runat="server" AutoCompleteType="Disabled" TextMode="Password"></asp:TextBox><br />
+    <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label> <asp:TextBox ID="TextBox6" runat="server" AutoCompleteType="Disabled" ReadOnly="True"></asp:TextBox><br />
+    <asp:Label ID="Label8" runat="server" Text="Confirm Password"></asp:Label> <asp:TextBox ID="TextBox7" runat="server" AutoCompleteType="Disabled" ReadOnly="True"></asp:TextBox><br />
     <asp:Label ID="Label9" runat="server" Text="Date Of Birth"></asp:Label> <asp:TextBox ID="TextBox8" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
     <asp:Label ID="Label10" runat="server" Text="Phone Number"></asp:Label> <asp:TextBox ID="TextBox9" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
     <asp:Label ID="Label11" runat="server" Text="Address"></asp:Label> <asp:TextBox ID="TextBox10" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />

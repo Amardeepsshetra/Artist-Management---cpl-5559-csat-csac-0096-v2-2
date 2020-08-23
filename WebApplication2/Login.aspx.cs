@@ -10,11 +10,12 @@ namespace WebApplication2
 {
 	public partial class WebForm8 : System.Web.UI.Page
 	{
+		
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
+		
 		protected void Button1_Click(object sender, EventArgs e)
 		{
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");

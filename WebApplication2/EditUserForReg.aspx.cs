@@ -60,6 +60,7 @@ namespace WebApplication2
 
 		protected void Button3_Click(object sender, EventArgs e)
 		{
+		
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
 			sq.Open();
 			String sqlInsertQuery = "SELECT * FROM Users Where UserId = " + int.Parse(TextBox11.Text);
