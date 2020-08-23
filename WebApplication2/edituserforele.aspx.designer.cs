@@ -10,7 +10,7 @@
 namespace WebApplication2 {
     
     
-    public partial class WebForm9 {
+    public partial class WebForm13 {
         
         /// <summary>
         /// Label1 control.

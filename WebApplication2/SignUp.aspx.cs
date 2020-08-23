@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 
 namespace WebApplication2
 {
-	public partial class WebForm2 : System.Web.UI.Page
+	public partial class SignUp : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -28,7 +28,7 @@ namespace WebApplication2
 					ValidationPassedLabel.Visible = false;
 				}
 			}
-			
+
 
 		}
 
@@ -64,9 +64,9 @@ namespace WebApplication2
 				sq.Close();
 			}
 			Server.Transfer("Login.aspx");
-			
+			Response.Redirect(Request.RawUrl);
 		}
-
 		
 	}
+	
 }

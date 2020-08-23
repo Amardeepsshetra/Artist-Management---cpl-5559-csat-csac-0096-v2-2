@@ -1,30 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace WebApplication2
 {
-	public partial class WebForm1 : System.Web.UI.Page
+	public partial class WebForm12 : System.Web.UI.Page
 	{
-		
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
 		}
-
 		protected void Button1_Click(object sender, EventArgs e)
 		{
-			Server.Execute("Adduser.aspx");
+			Server.Transfer("Adduser.aspx");
 		}
 
 		protected void Button3_Click(object sender, EventArgs e)
 		{
-			Server.Execute("editUser.aspx");
+			Server.Transfer("editUserforele.aspx");
 		}
 
 		protected void btnSearchBar_Click(object sender, EventArgs e)
@@ -48,7 +46,7 @@ namespace WebApplication2
 				Label1.Visible = true;
 				Label1.Text = "The search Term " + txtSearch.Text + " Is Not Available in the Records";
 			}
-
+			Response.Redirect(Request.RawUrl);
 
 
 		}
@@ -66,7 +64,7 @@ namespace WebApplication2
 
 		protected void Button2_Click(object sender, EventArgs e)
 		{
-			Server.Execute("View.aspx");
+			Server.Transfer("View.aspx");
 
 		}
 	}

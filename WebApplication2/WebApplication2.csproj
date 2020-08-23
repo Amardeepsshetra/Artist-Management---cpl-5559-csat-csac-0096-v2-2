@@ -76,30 +76,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="calendar.aspx" />
+    <Content Include="images\download.jpeg" />
+    <Content Include="images\OIP.jpeg" />
+    <Content Include="images\OIP1.jpeg" />
+    <Content Include="images\OIP2.jpeg" />
     <Content Include="script.js" />
+    <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Users.aspx" />
+    <Content Include="Usersforadmin.aspx" />
     <Content Include="EditUserForReg.aspx" />
     <Content Include="View.aspx" />
+    <Content Include="Usersforele.aspx" />
+    <Content Include="edituserforele.aspx" />
     <Content Include="WelForAdmin.aspx" />
     <Content Include="Adduser.aspx" />
     <Content Include="ReqForAdmin.aspx" />
-    <Content Include="editUser.aspx" />
+    <Content Include="editUserforadmin.aspx" />
     <Content Include="WelForEle.aspx" />
-    <Content Include="MyprofileReg.aspx" />
     <Content Include="WelForReg.aspx" />
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="calendar.aspx.cs">
-      <DependentUpon>calendar.aspx</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="calendar.aspx.designer.cs">
-      <DependentUpon>calendar.aspx</DependentUpon>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,12 +126,12 @@
     <Compile Include="Site3.Master.designer.cs">
       <DependentUpon>Site3.Master</DependentUpon>
     </Compile>
-    <Compile Include="Users.aspx.cs">
-      <DependentUpon>Users.aspx</DependentUpon>
+    <Compile Include="Usersforadmin.aspx.cs">
+      <DependentUpon>Usersforadmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users.aspx.designer.cs">
-      <DependentUpon>Users.aspx</DependentUpon>
+    <Compile Include="Usersforadmin.aspx.designer.cs">
+      <DependentUpon>Usersforadmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditUserForReg.aspx.cs">
       <DependentUpon>EditUserForReg.aspx</DependentUpon>
@@ -141,6 +146,20 @@
     </Compile>
     <Compile Include="View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usersforele.aspx.cs">
+      <DependentUpon>Usersforele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usersforele.aspx.designer.cs">
+      <DependentUpon>Usersforele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edituserforele.aspx.cs">
+      <DependentUpon>edituserforele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edituserforele.aspx.designer.cs">
+      <DependentUpon>edituserforele.aspx</DependentUpon>
     </Compile>
     <Compile Include="WelForAdmin.aspx.cs">
       <DependentUpon>WelForAdmin.aspx</DependentUpon>
@@ -163,12 +182,12 @@
     <Compile Include="ReqForAdmin.aspx.designer.cs">
       <DependentUpon>ReqForAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="editUser.aspx.cs">
-      <DependentUpon>editUser.aspx</DependentUpon>
+    <Compile Include="editUserforadmin.aspx.cs">
+      <DependentUpon>editUserforadmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="editUser.aspx.designer.cs">
-      <DependentUpon>editUser.aspx</DependentUpon>
+    <Compile Include="editUserforadmin.aspx.designer.cs">
+      <DependentUpon>editUserforadmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="WelForEle.aspx.cs">
       <DependentUpon>WelForEle.aspx</DependentUpon>
@@ -176,13 +195,6 @@
     </Compile>
     <Compile Include="WelForEle.aspx.designer.cs">
       <DependentUpon>WelForEle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MyprofileReg.aspx.cs">
-      <DependentUpon>MyprofileReg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MyprofileReg.aspx.designer.cs">
-      <DependentUpon>MyprofileReg.aspx</DependentUpon>
     </Compile>
     <Compile Include="WelForReg.aspx.cs">
       <DependentUpon>WelForReg.aspx</DependentUpon>

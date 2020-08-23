@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     <title></title>
       <script type="text/javascript" src="javascript/script.js">
@@ -14,88 +15,37 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 100%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 100%;
-  background-color: #f1f1f1;
-  height: 727px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
+    body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
 }
 </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-             <header>
-  <h2>Artist Management</h2>
-</header>
+    <form runat="server">
+   <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Artist Management</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="WelForAdmin.aspx" class="w3-bar-item w3-button">Welcome</a>
+      <a href="editUserforadmin.aspx" class="w3-bar-item w3-button">My Profile</a>
+      <a href="Usersforadmin.aspx" class="w3-bar-item w3-button">Users</a>
+         <a href="ReqForAdmin.aspx" class="w3-bar-item w3-button">Access Requests</a>
+         <a href="Login.aspx" class="w3-bar-item w3-button">Logout</a>
+    </div>
+  </div>
+</div>
 
-<section style="height: 592px; width: 1315px">
-  <nav>
-    <ul>
-        <li><asp:LinkButton ID ="LinkButton5" runat="server" PostBackUrl="~/WelForAdmin.aspx">Welcome</asp:LinkButton></li>
-        <li><asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/editUser.aspx">My Profile</asp:LinkButton></li>
-        <li><asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Users.aspx">Users</asp:LinkButton></li>
-       <li><asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ReqForAdmin.aspx">Access Requests</asp:LinkButton></li>
-       <li> <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/Login.aspx">Logout</asp:LinkButton></li>
-     
-    </ul>
-  </nav>
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+   </div>
+
+
+
   <article>
   <asp:ContentPlaceHolder ID="ContentPlaceHolderTop" runat="server"></asp:ContentPlaceHolder>
             <asp:ContentPlaceHolder ID="ContentPlaceHolderTest" runat="server"></asp:ContentPlaceHolder>
@@ -104,12 +54,11 @@ footer {
             </asp:ContentPlaceHolder>
   </article>
  
-</section>
-
-
-
-        </div>
-    </form>
+     </form>
+    <!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">Artists</a></p>
+</footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>

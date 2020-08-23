@@ -31,6 +31,7 @@ namespace WebApplication2
 
 
 			sq.Close();
+			Response.Redirect(Request.RawUrl);
 		}
 
 		protected void Button2_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace WebApplication2
 			cmd1.ExecuteNonQuery();
 
 			sq.Close();
+			Response.Redirect(Request.RawUrl);
 		}
 	}
 }

@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 
 namespace WebApplication2
 {
-	public partial class WebForm3 : System.Web.UI.Page
+	public partial class WebForm13 : System.Web.UI.Page
 	{
-
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			
-
 
 		}
 		protected void Button1_Click(object sender, EventArgs e)
@@ -43,22 +40,8 @@ namespace WebApplication2
 			sq.Close();
 			Response.Redirect(Request.RawUrl);
 		}
+
 		protected void Button2_Click(object sender, EventArgs e)
-		{
-			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
-			sq.Open();
-
-			SqlCommand xp1 = new SqlCommand("Insert into RequestAccess(Rid, Userid, Status) Values(@Rid, @Userid, @Status)", sq);
-			xp1.Parameters.AddWithValue("Rid", TextBox11.Text);
-			xp1.Parameters.AddWithValue("@Userid", TextBox11.Text);
-			xp1.Parameters.AddWithValue("@Status", "Requested");
-
-			xp1.ExecuteNonQuery();
-			sq.Close();
-			Response.Redirect(Request.RawUrl);
-		}
-
-		protected void Button3_Click(object sender, EventArgs e)
 		{
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
 			sq.Open();
@@ -70,7 +53,6 @@ namespace WebApplication2
 				TextBox1.Text = (dr["Firstname"].ToString());
 				TextBox2.Text = (dr["Lastname"].ToString());
 				TextBox3.Text = (dr["Accesstype"].ToString());
-				TextBox4.Text = (dr["Department"].ToString());
 				TextBox5.Text = (dr["Email"].ToString());
 				TextBox6.Text = (dr["Password"].ToString());
 				TextBox7.Text = (dr["Confirmpassword"].ToString());
@@ -81,6 +63,40 @@ namespace WebApplication2
 			}
 			sq.Close();
 			
+
+		}
+
+		protected void Button3_Click(object sender, EventArgs e)
+		{
+			if (!(TextBox11.Text == string.Empty))
+			{
+
+
+				SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
+
+				String sqlDeleteQuery = "DELETE FROM Users Where UserId = " + int.Parse(TextBox11.Text);
+				SqlCommand cmd1 = new SqlCommand(sqlDeleteQuery, sq);
+				SqlDataReader myReader;
+				try
+				{
+					sq.Open();
+					myReader = cmd1.ExecuteReader();
+					while (myReader.Read())
+					{
+					}
+					sq.Close();
+				}
+				catch (Exception ex)
+				{
+
+				}
+			}
+			else
+			{
+
+			}
+
+			Response.Redirect(Request.RawUrl);
 		}
 	}
 }

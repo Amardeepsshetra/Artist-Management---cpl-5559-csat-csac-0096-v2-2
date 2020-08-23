@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="View.aspx.cs" Inherits="WebApplication2.WebForm11" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Usersforele.aspx.cs" Inherits="WebApplication2.WebForm12" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderTop" runat="server">
@@ -20,14 +20,24 @@ body {
          </style>
      <div class="w3-row w3-padding-64" id="menu">
     <div class="w3-col l6 w3-padding-large">
-     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="UserId"  ForeColor="Black" Width="16px" style="margin-right: 0px; margin-left: 5px;" Height="317px" DataSourceID="SqlDataSource2">
-         <Columns>
-             <asp:BoundField DataField="UserId" HeaderText="UserId" ReadOnly="True" SortExpression="UserId" />
-             <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
-             <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname" />
-             <asp:BoundField DataField="Accesstype" HeaderText="Accesstype" SortExpression="Accesstype" />
-             <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
-         </Columns>
+     <asp:Button ID="Button1" runat="server" Text="Create" OnClick="Button1_Click" />
+    <asp:Button ID="Button2" runat="server" Text="View" OnClick="Button2_Click" />
+    <asp:Button ID="Button3" runat="server" Text="Edit" OnClick="Button3_Click" />
+    <br /><br /><div>
+           <asp:TextBox runat="server" ID="txtSearch" AutoCompleteType="Disabled"/>
+           <asp:Button runat="server" ID="btnSearchBar" Style="background-color: #c9302c;" CssClass="btn btn-danger" Text="Search" OnClientClick="javascipt: return confirm('are you sure want to search ?');" OnClick="btnSearchBar_Click" />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+       </div>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="UserId"  ForeColor="Black" Width="16px" style="margin-right: 0px; margin-left: 5px;" Height="317px">
+    <Columns>
+        <asp:BoundField DataField="UserId" HeaderText="UserId" ReadOnly="True" SortExpression="UserId" />
+        <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
+        <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname" />
+        <asp:BoundField DataField="Accesstype" HeaderText="Accesstype" SortExpression="Accesstype" />
+        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
+    </Columns>
     <FooterStyle BackColor="#CCCCCC" />
     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
     <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -39,7 +49,8 @@ body {
     <SortedDescendingHeaderStyle BackColor="#383838" />
 </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ArtistManagementConnectionString %>" SelectCommand="SELECT [UserId], [Firstname], [Lastname], [Accesstype], [Department] FROM [Users]"></asp:SqlDataSource>
-</div>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ArtistManagementConnectionString %>" SelectCommand="SELECT [UserId], [Firstname], [Lastname], [Accesstype], [Department], [Email] FROM [Users]"></asp:SqlDataSource>
+   </div>
          </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderTest" runat="server">

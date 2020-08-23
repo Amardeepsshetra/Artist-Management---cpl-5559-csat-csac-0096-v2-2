@@ -31,15 +31,15 @@ namespace WebApplication2
 
 			if (otpt.Equals("Regular User"))
 			{
-				Server.Execute("WelForReg.aspx");
+			    Server.Transfer("WelForReg.aspx");
 			}
 			else if (otpt.Equals("Administrator"))
 			{
-				Server.Execute("WelForAdmin.aspx");
+				Server.Transfer("WelForAdmin.aspx");
 			}
 			else if (otpt.Equals("Elevated Access User"))
 			{
-				Server.Execute("WelForEle.aspx");
+				Server.Transfer("WelForEle.aspx");
 			}
 
 
@@ -47,7 +47,7 @@ namespace WebApplication2
 			else
 			{
 			
-				Response.Write("Incorrect Username / Password");
+				Response.Write("<span style= 'color:white'>Incorrect Username / Password<span>");
 			}
 
 
