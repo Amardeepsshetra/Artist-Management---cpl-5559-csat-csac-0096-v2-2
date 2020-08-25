@@ -15,10 +15,7 @@ namespace WebApplication2
 		{
 
 		}
-		protected void Button1_Click(object sender, EventArgs e)
-		{
-			Server.Transfer("Adduser.aspx");
-		}
+		
 
 		protected void Button3_Click(object sender, EventArgs e)
 		{

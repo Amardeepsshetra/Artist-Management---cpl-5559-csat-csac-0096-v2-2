@@ -41,6 +41,8 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
      <h3>EDIT INFORMATION</h3>
      <p>
          <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" class="btn btn-primary btn-block btn-large"  Text="Show My Data" />
+         <br />
+         <asp:Label ID="Label12" runat="server" Text=""></asp:Label>
      </p>
     <asp:Label ID="Label1" runat="server" Text="UserId"></asp:Label>     <asp:TextBox ID="TextBox11" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
     <asp:Label ID="Label2" runat="server" Text="First Name"></asp:Label> <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
@@ -54,6 +56,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
     <asp:Label ID="Label10" runat="server" Text="Phone Number"></asp:Label> <asp:TextBox ID="TextBox9" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
     <asp:Label ID="Label11" runat="server" Text="Address"></asp:Label> <asp:TextBox ID="TextBox10" runat="server" AutoCompleteType="Disabled"></asp:TextBox><br />
     <asp:Button ID="Button1" runat="server" Text="Edit" class="btn btn-primary btn-block btn-large"  OnClick="Button1_Click" /><br />
+        
     <asp:Button ID="Button2" runat="server" Text="Request Elevated Access" class="btn btn-primary btn-block btn-large"  OnClick="Button2_Click" />
         </div>
       </div>

@@ -20,7 +20,6 @@ body {
          </style>
      <div class="w3-row w3-padding-64" id="menu">
     <div class="w3-col l6 w3-padding-large">
-     <asp:Button ID="Button1" runat="server" Text="Create" OnClick="Button1_Click" />
     <asp:Button ID="Button2" runat="server" Text="View" OnClick="Button2_Click" />
     <asp:Button ID="Button3" runat="server" Text="Edit" OnClick="Button3_Click" />
     <br /><br /><div>

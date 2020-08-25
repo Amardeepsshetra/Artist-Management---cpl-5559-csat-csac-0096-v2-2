@@ -47,6 +47,7 @@ namespace WebApplication2
 		{
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
 			sq.Open();
+			
 
 			SqlCommand xp1 = new SqlCommand("Insert into RequestAccess(Rid, Userid, Status) Values(@Rid, @Userid, @Status)", sq);
 			xp1.Parameters.AddWithValue("Rid", TextBox11.Text);
@@ -63,7 +64,9 @@ namespace WebApplication2
 		
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
 			sq.Open();
+			
 			String sqlInsertQuery = "SELECT * FROM Users Where UserId = " + int.Parse(TextBox11.Text);
+
 			SqlCommand cmd = new SqlCommand(sqlInsertQuery, sq);
 			SqlDataReader dr = cmd.ExecuteReader();
 			if (dr.Read())
@@ -79,6 +82,29 @@ namespace WebApplication2
 				TextBox9.Text = (dr["Phnno"].ToString());
 				TextBox10.Text = (dr["Address"].ToString());
 
+			}
+			dr.Close();
+			String sqlInsertQuery1 = "SELECT Status FROM RequestAccess Where Userid='" + TextBox11.Text + "'";
+			SqlCommand cmd1 = new SqlCommand(sqlInsertQuery1, sq);
+			SqlDataReader dr1 = cmd1.ExecuteReader();
+			String otpt = "";
+			if (dr1.Read())
+			{
+				otpt = (dr1["Status"].ToString());
+
+			}
+
+			if (otpt.Equals("Requested"))
+			{
+				Label12.Text = "Your Request is in processing";
+			}
+			else if (otpt.Equals("Approved"))
+			{
+				Label12.Text = "Your Request is Approved";
+			}
+			else if (otpt.Equals("Declined"))
+			{
+				Label12.Text = "Your Request is Declined";
 			}
 			sq.Close();
 			
