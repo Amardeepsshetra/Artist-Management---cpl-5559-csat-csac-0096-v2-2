@@ -18,6 +18,12 @@ namespace WebApplication2
 		
 		protected void Button1_Click(object sender, EventArgs e)
 		{
+			HttpCookie cook = new HttpCookie("data");
+			cook.Expires = DateTime.Now.AddDays(1);
+			cook.Value = TextBox1.Text;
+			Response.Cookies.Add(cook);
+			
+			Session["FirstName"] = TextBox1.Text;
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
 			sq.Open();
 			String sqlInsertQuery = "SELECT Accesstype FROM Users Where Email='" + TextBox1.Text + "' and Password='" + TextBox2.Text + "'";

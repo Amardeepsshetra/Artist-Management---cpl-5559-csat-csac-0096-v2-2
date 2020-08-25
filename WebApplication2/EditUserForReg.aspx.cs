@@ -13,7 +13,7 @@ namespace WebApplication2
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			
+			TextBox5.Text = Request.Cookies["data"].Value;
 
 
 		}
@@ -61,16 +61,20 @@ namespace WebApplication2
 
 		protected void Button3_Click(object sender, EventArgs e)
 		{
-		
+			
 			SqlConnection sq = new SqlConnection(@"Data Source=DESKTOP-38OFP7E\SQLEXPRESS;Initial Catalog=ArtistManagement;Integrated Security=True");
 			sq.Open();
 			
-			String sqlInsertQuery = "SELECT * FROM Users Where UserId = " + int.Parse(TextBox11.Text);
-
+			String sqlInsertQuery = "SELECT * FROM Users Where Email = '" + TextBox5.Text+"'";
+			
 			SqlCommand cmd = new SqlCommand(sqlInsertQuery, sq);
 			SqlDataReader dr = cmd.ExecuteReader();
+
+			
+
 			if (dr.Read())
 			{
+			
 				TextBox1.Text = (dr["Firstname"].ToString());
 				TextBox2.Text = (dr["Lastname"].ToString());
 				TextBox3.Text = (dr["Accesstype"].ToString());
